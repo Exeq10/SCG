@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d8b774d43a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>CGG</title>
+</head>
+
+<body>
+    <div class="bg-overlay">
+        <!-- quitar d-none -->
+        <div class="bienvenida " id="welcome">
+            <h1>¡Hola Bienvenid&#128513!</h1>
+
+            <div class="user">
+                <h2>Ingresa Tu Nombre</h2>
+                <input type="text" id="username" placeholder="Ingrese su nombre " />
+
+                <button class="btn " id="entry" onclick="entry()">
+                    <i class="fa-solid fa-circle-check"></i>
+                </button>
+                <p id="alert"></p>
+            </div>
+        </div>
+
+        <main class="d-none" id="main">
+            <section class="container" id="login_user">
+                <div class="presupuesto">
+                    <div class="login_user">
+                        <h3>Hola, <span id="name_user"></span> !!</h3>
+                        <p>Ingresa tu presupuesto</p>
+
+                        <input type="number" id="presupuesto" onchange="changeMount()" name="presupuesto " />
+
+                        <button class="btn " id="aceptMount" onclick="loadMenu()">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <p id="alertaTwo"></p>
+                <h4><span class="emoji">&#129297 </span> <br>
+                    Saldo
+
+                </h4>
+                <h2>$ <span class="total" id="total"></span></h2>
+            </section>
+
+            <section class="container-menu d-none" id="operationsMenu">
+                <!-- menu ingreso de datos -->
+                <div class="menu__datos">
+                    <label for="name"> Nombre Gasto </label>
+                    <input type="text" id="name" name="name" />
+
+                    <label for="import">Importe </label>
+                    <input type="number" id="number" name="number" />
+                    <button class="btn" id="btn__gasto" onclick="setGasto()">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </button>
+                </div>
+                <!-- fin ingreso datos  -->
+
+
+                <!-- datos ingresados  -->
+
+                <div class="datos" id="datos">
+
+
+                </div>
+            </section>
+        </main>
+
+        <script src="/js/script.js"></script>
+    </div>
+</body>
+
+</html>
